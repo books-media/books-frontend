@@ -1,5 +1,11 @@
 # BooksFrontend
 
+Front-end for Books-Media project by Karl P. and Nicole K.
+Will eventually be a general hub for media.
+Planned integrations:
+- Google Books
+- OMDB
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
 
 ## Development server
