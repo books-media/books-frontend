@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  queryTerm: string;
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  submitHandler(event: { preventDefault: () => void; }) {
+    event.preventDefault();
+    // set this to only work w/ movies for now
+    this.router.navigate(['/movies'], {queryParams: {q: this.queryTerm}});
+  }
 }
