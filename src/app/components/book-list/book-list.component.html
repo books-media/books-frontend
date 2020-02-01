@@ -1,1 +1,12 @@
-<p>book-list works!</p>
+<div class="row">
+    <div class="card col-md-4 col-sm-6 col-xs-12" *ngFor="let b of books">
+        <div class="alert alert-secondary app-clickable"
+            [routerLink]="['/book-details', b.id]">
+            <div class="card-body">
+                <h5 class="card-title">{{ b.title }}</h5>
+                <p>{{ b.Year }}</p>
+                <img [src]="b.thumbnail" [alt]="b.title" class="card-img-top">
+            </div>
+        </div>
+    </div>
+</div>

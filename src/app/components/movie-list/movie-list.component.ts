@@ -12,15 +12,15 @@ export class MovieListComponent implements OnInit {
 
   movies: any[];
 
-  constructor(private service: SearchService,
+  constructor(/*private service: SearchService,*/
               private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
 
-    this.activatedRoute.queryParams.subscribe(
-      qparams => {
-        let q = qparams['q'];
-        this.service.searchMovies(q)
-          .subscribe(res => this.movies = res.Search);
-      });
+    // this.activatedRoute.queryParams.subscribe(
+    //   qparams => {
+    //     let q = qparams['q'];
+    //     this.service.searchMovies(q)
+    //       .subscribe(res => this.movies = res.Search);
+    //   });
 }}

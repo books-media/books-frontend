@@ -11,16 +11,16 @@ export class MovieDetailsComponent implements OnInit {
 
   movie: any;
 
-  constructor(private service: SearchService,
+  constructor(/*private service: SearchService,*/
               private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.activatedRoute.params
-      .subscribe(params => {
-        let id = params['imdbID'];
-        this.service.getMovieDetails(id)
-          .subscribe(res => this.movie = res);
-      });
+    // this.activatedRoute.params
+    //   .subscribe(params => {
+    //     let id = params['imdbID'];
+    //     this.service.getMovieDetails(id)
+    //       .subscribe(res => this.movie = res);
+    //   });
   }
 
   goBack() {
